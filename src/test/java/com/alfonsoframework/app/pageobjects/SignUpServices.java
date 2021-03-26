@@ -1,6 +1,7 @@
 package com.alfonsoframework.app.pageobjects;
 
 import com.alfonsoframework.app.enums.Gender;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -50,8 +51,9 @@ public class SignUpServices {
     }
 
     public void selectCountry(String country) {
-//        this.wait.until(ExpectedConditions.elementToBeSelected(this.signUpPageObject.getCountry()));
-        new Select(this.signUpPageObject.getCountry()).selectByValue(country);
+        Select selectCountry = new Select(this.signUpPageObject.getCountry());
+        this.wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(String.format("#countries > option[value='%s']", country))));
+        selectCountry.selectByValue(country);
     }
 
     public void selectBirthDay(String day) {

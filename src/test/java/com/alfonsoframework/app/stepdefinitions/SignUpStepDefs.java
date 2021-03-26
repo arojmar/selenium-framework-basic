@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.test.context.ContextConfiguration;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 @CucumberContextConfiguration
 @ContextConfiguration(classes = {DriverConfig.class})
 public class SignUpStepDefs {
@@ -44,6 +46,7 @@ public class SignUpStepDefs {
 
     @Then("he would be told that the account was created")
     public void heWouldBeToldThatTheAccountWasCreated() {
+        assertThat(true).isEqualTo(true);
     }
 
 
@@ -58,5 +61,10 @@ public class SignUpStepDefs {
                         .withoutBirthDay()
                         .build()
         );
+    }
+
+    @Then("he would be told that the account was not created")
+    public void heWouldBeToldThatTheAccountWasNotCreated() {
+        assertThat(true).isEqualTo(false);
     }
 }
