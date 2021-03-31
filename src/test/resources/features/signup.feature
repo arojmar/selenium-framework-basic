@@ -1,5 +1,6 @@
 Feature: Client sign up
 
+  @run
   Scenario: Client wants to sign up sucessfully
     Given client wants to have an account
     When he sends requires information to get the account
