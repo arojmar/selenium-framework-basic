@@ -1,4 +1,5 @@
 # Project exclude paths
 /target/
 selenium-framework-basic.iml
-/.idea
+/.idea/vcs.xml
+/src/test/resources/drivers/grid/cm
