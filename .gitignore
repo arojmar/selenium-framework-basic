@@ -1,2 +1,4 @@
 # Project exclude paths
 /target/
+selenium-framework-basic.iml
+/.idea
