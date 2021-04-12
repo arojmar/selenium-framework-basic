@@ -4,8 +4,10 @@ import com.alfonsoframework.app.model.User;
 import com.alfonsoframework.app.pageobjects.SignUpServices;
 import com.alfonsoframework.app.util.RandomNumberGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+@Scope("cucumber-glue")
 @Component
 public class UserSignUp {
 
@@ -25,8 +27,6 @@ public class UserSignUp {
         signUp.selectBirthYear(user.getBirthYear());
         signUp.writePassword(user.getPassword());
         signUp.writeConfirmPassword(user.getPasswordConfirmation());
-
-        //signUp.clickOnSubmit();
     }
 
 

@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.net.URI;
-import java.util.Map;
 
 @Component
 public class DriverFactory {
@@ -40,7 +39,6 @@ public class DriverFactory {
         }
         throw new IllegalAccessException("Driver not found for browser:" + browser);
     }
-
 
     @SneakyThrows
     private RemoteWebDriver getRemoteWebDriver(Browser browser) {

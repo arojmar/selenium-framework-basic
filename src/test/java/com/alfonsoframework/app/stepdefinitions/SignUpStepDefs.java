@@ -1,21 +1,17 @@
 package com.alfonsoframework.app.stepdefinitions;
 
 import com.alfonsoframework.app.builders.data.UserBuilder;
-import com.alfonsoframework.app.conf.DriverConfig;
 import com.alfonsoframework.app.tasks.NavigateTo;
 import com.alfonsoframework.app.tasks.UserSignUp;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.test.context.ContextConfiguration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@CucumberContextConfiguration
-@ContextConfiguration(classes = {DriverConfig.class})
+
 public class SignUpStepDefs {
 
     @Autowired

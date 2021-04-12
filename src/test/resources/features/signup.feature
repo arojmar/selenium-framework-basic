@@ -1,3 +1,4 @@
+@all
 Feature: Client sign up
 
   @test0
