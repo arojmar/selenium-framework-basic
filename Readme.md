@@ -13,4 +13,4 @@ To configure Jenkins in local
 > <code> sudo docker run --add-host="localhost:192.168.0.6" -p 8082:8080 -p 50000:50000 --name jenkins -d -v /home/alfonso/Workspace/jenkins_home:/var/jenkins_home jenkins/jenkins </code>
 
 
-*Please note that if you have problems with permissions with docker, you should run it as a root user.
+*Please note that if you have problems with permissions in docker, you should run it as a root user.
