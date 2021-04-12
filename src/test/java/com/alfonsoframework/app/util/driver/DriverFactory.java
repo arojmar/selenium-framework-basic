@@ -1,6 +1,7 @@
 package com.alfonsoframework.app.util.driver;
 
 import com.alfonsoframework.app.enums.Browser;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import lombok.SneakyThrows;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -30,11 +31,11 @@ public class DriverFactory {
             return getRemoteWebDriver(browser);
         }
         if (Browser.chrome == browser) {
-            System.setProperty("webdriver.chrome.driver", String.format(pathFormat, "chromedriver"));
+            WebDriverManager.chromedriver().setup();
             return new ChromeDriver();
         }
         if (Browser.firefox == browser) {
-            System.setProperty("webdriver.gecko.driver", String.format(pathFormat, "geckodriver"));
+            WebDriverManager.firefoxdriver().setup();
             return new FirefoxDriver();
         }
         throw new IllegalAccessException("Driver not found for browser:" + browser);
